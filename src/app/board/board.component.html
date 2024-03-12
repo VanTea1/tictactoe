@@ -1,17 +1,23 @@
-<h1>Current Player: {{ player }} </h1>
+<div class="wrapper">
+    <div class="header">
+        <h1 class="currentP">Current Player: {{ player }} </h1>
 
-<button (click)="newGame()">Start new Game</button>
+        <button (click)="newGame()" class="buttonStart">Start new Game</button>
+    
+    
+        <h2 *ngIf="winner">
+            Player {{ winner }} won the game!
+        </h2>
+    </div>
+    <div class="spacing"></div>
+    <main class="board">
+        <app-square 
+            class="XandO"
+            *ngFor="let val of squares; let i = index" 
+            [value]="val"
+            (click)="makeMove(i)"> 
+        </app-square>
+    </main>
+</div>
 
-
-<h2 *ngIf="winner">
-    Player {{ winner }} won the game!
-</h2>
-
-
-<main>
-    <app-square 
-        *ngFor="let val of squares; let i = index" 
-        [value]="val"
-        (click)="makeMove(i)"> 
-    </app-square>
-</main>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap">

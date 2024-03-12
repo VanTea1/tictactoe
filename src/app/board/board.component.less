@@ -1,10 +1,77 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 main {
     display: grid;
     grid-template-columns: 200px 200px 200px;
     grid-gap: 0px;
+    
 }
   
 app-square {
-    border: 1px gray solid;
+    border: 2px #ff88ba solid;
     height: 200px;
+}
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.header{
+    padding: 20px;
+    background-color: white;
+    border: 2px #ff88ba solid;
+    height: auto;
+    color: #88204b;
+}
+
+.currentP{
+    font-size: 50px;
+}
+
+.buttonStart{
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 500px;
+    transition-property: background-color,border-color,color,box-shadow,filter;
+    border: 1px solid transparent;
+    letter-spacing: 2px;
+    min-width: 160px;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 16px 14px 18px;
+    color: #1b1b1b;
+    box-shadow: inset 0 0 0 2px #ff88ba;
+    background-color: #ff88ba60;
+    color: #88204b;
+}
+
+.XandO{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 10vh;
+    font-family: 'Orbitron', sans-serif;
+    color: #88204b;
+}
+
+
+.board{
+    background-color: white;
+
+}
+.spacing{
+    margin: 20px;
 }
