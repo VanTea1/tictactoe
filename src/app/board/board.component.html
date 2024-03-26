@@ -15,7 +15,7 @@
             class="XandO"
             *ngFor="let val of squares; let i = index" 
             [value]="val"
-            (click)="makeMove(i)"> 
+            (click)="enableClick ? makeMove(i) : null"> 
         </app-square>
     </main>
 </div>
